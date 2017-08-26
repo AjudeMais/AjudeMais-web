@@ -30,8 +30,5 @@
     "gulp-wrap": "0.13.0",
     "run-sequence": "1.2.2",
     "url": "0.11.0"
-  },
-  "engines": {
-    "node": "6.9.2"
   }
 }
