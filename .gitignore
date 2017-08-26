@@ -144,8 +144,8 @@ Desktop.ini
 node_modules
 .tmp
 .sass-cache
-src/bower_components
-/src/bower_components
+src/vendors
+/src/vendors
 bower_components
 .idea
 ./idea
