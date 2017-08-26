@@ -1,0 +1,198 @@
+<div class="row">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-university"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Instituições</span>
+                <span class="info-box-number">{{vm.countInstituicoes}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa fa-heart"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Doações</span>
+                <span class="info-box-number">{{vm.countDonativos}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix visible-sm-block"></div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-user"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Doadores</span>
+                <span class="info-box-number">{{vm.countDoadores}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-id-card-o"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Mensageiros</span>
+                <span class="info-box-number">{{vm.countMensageiros}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <uib-accordion>
+            <div uib-accordion-group class="box" is-open="vm.statusPanelLineChart">
+                <uib-accordion-heading>
+                    Doações nos últimos 30 dias
+                    <i class="pull-right glyphicon"
+                       ng-class="{'fa fa-chevron-down': vm.statusPanelLineChart, 'fa fa-chevron-right': !vm.statusPanelLineChart}"></i>
+                </uib-accordion-heading>
+
+                <div class="box-body">
+                    <div class="chart">
+                        <canvas id="line" class="chart chart-line" chart-data="vm.dataDoacoesPeriod"
+                                options="vm.options" chart-legend="true"
+                                chart-labels="vm.labelsDoacoesPeriod" chart-series="vm.seriesDoacoesPeriod">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </uib-accordion>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <uib-accordion>
+            <div uib-accordion-group class="box" is-open="vm.statusPanelInstDetail">
+                <uib-accordion-heading>
+                    Visão Geral de Instituição
+                    <i class="pull-right glyphicon"
+                       ng-class="{'fa fa-chevron-down': vm.statusPanelInstDetail, 'fa fa-chevron-right': !vm.statusPanelInstDetail}"></i>
+                </uib-accordion-heading>
+
+                <div class="box-body">
+                    <select name="instituicao" class="form-control"
+                            ng-model="vm.instituicaoSelected"
+                            ng-options="inst as inst.nome for inst in vm.instituicoesAtivas"
+                            ng-change="vm.onSelectInstituicao()">
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="text-center">
+                            <strong>Doações do último mês</strong>
+                        </p>
+                        <div class="chart">
+                            <canvas id="lineInst" class="chart chart-line" chart-data="vm.dataDoacoesInstPeriod"
+                                    options="vm.options" chart-legend="true"
+                                    chart-labels="vm.labelsDoacoesInstPeriod" chart-series="vm.seriesDoacoesPeriod">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-center">
+                            <strong>Campanhas Abertas</strong>
+                        </p>
+
+                        <div ng-repeat="campanha in vm.campanhasAtivasInt" ng-show="vm.campanhasAtivasInt.length">
+                            <div class="box box-primary">
+                                <div class="box-header">{{campanha.nome}}</div>
+                                <div class="box-body">
+                                    <div ng-repeat="meta in campanha.metas">
+                                        <div class="progress-group">
+                                            <span class="">{{meta.categoria.descricao}}</span>
+                                            <span class="progress-number"><b>{{meta.percentualAtingido}}</b> % de {{meta.quantidade}}</span>
+
+                                            <div class="progress sm">
+                                                <div class="progress-bar progress-bar-aqua"
+                                                     style="width: {{meta.percentualAtingido}}%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-sm" ng-show="!vm.campanhasAtivasInt.length">
+                            Nenhuma campanha ativa.
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="description-block border-right">
+                                <h5 class="description-header">
+                                    {{vm.countDonativosInst}}
+                                </h5>
+                                <span class="description-text">DOAÇÕES GERAIS</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="description-block border-right">
+                                <h5 class="description-header">
+                                    {{vm.countDonativosCampanhaInst}}
+                                </h5>
+                                <span class="description-text">DOAÇÕES POR CAMPANHAS</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="description-block border-right">
+                                <h5 class="description-header">
+                                    {{vm.countCampanhasInst}}
+                                </h5>
+                                <span class="description-text">CAMPANHAS</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="description-block">
+                                <h5 class="description-header">
+                                    {{vm.countMensageirosInst}}
+                                </h5>
+                                <span class="description-text">MENSAGEIROS ASSOCIADOS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </uib-accordion>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <uib-accordion>
+            <div uib-accordion-group class="box" is-open="vm.statusPanelRanking">
+                <uib-accordion-heading>
+                    Top Mensageiros
+                    <i class="pull-right glyphicon"
+                       ng-class="{'fa fa-chevron-down': vm.statusPanelRanking, 'fa fa-chevron-right': !vm.statusPanelRanking}"></i>
+                </uib-accordion-heading>
+
+                <div class="box-body no-padding">
+
+                    <ul class="users-list">
+                        <li ng-repeat="mr in vm.rankingMensageiros">
+                            <img ng-show="!mr.image"
+                                 ng-src="{{vm.mockImage}}">
+                            <img
+                                 data-ng-src="data:{{mr.ranking.mensageiro.mensageiro.foto.contentType}};base64,{{mr.image}}">
+
+                            <p class="users-list-name" href="#"><span class="badge">{{$index + 1}}</span>
+                                {{mr.ranking.mensageiro.mensageiro.nome}}</p>
+                            <span class="users-list-date">{{mr.ranking.mensageiro.instituicaoCaridade.nome}}</span>
+                            <span class="users-list-number">{{mr.ranking.quantidadeDoacoes}} Coletas Realizadas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </uib-accordion>
+    </div>
+</div>

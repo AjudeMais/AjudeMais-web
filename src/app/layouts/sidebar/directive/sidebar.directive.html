@@ -1,0 +1,49 @@
+<div id="sidebar-wrapper">
+
+    <ul class="sidebar">
+        <li class="sidebar-main">
+            <a ng-click="toggle()">
+                <img alt="AjudeMais" src="content/img/am-icon-name (3).png"/>
+                <span class="menu-icon fa fa-bars"></span>
+            </a>
+        </li>
+
+        <li class="sidebar-list" access-view="ROLE_ADMIN" ui-sref-active="active"><a id="op_dashboard_admin" ui-sref="home.dashboard.admin">
+            <i class="menu-icon fa fa-home fa-tachometer"></i> Dashboard</a>
+        </li>
+
+        <li class="sidebar-list" access-view="ROLE_INSTITUICAO" ui-sref-active="active"><a id="op_dashboard_instituicao" ui-sref="home.dashboard.instituicao">
+            <i class="menu-icon fa fa-home fa-tachometer"></i> Dashboard</a>
+        </li>
+
+        <li class="sidebar-list" access-view="ROLE_ADMIN"><a id="op_instituicoes" ui-sref="home.instituicao.list">
+            <i class="menu-icon fa fa-university fa-fw"></i>Instituições</a>
+        </li>
+        <li class="sidebar-list" access-view="ROLE_INSTITUICAO"><a id="op_campanhas" ui-sref="home.campanha.list">
+            <i class="menu-icon fa fa-hashtag"></i>Campanhas</a>
+        </li>
+        <li class="sidebar-list" access-view="ROLE_INSTITUICAO"><a id="op_donativos" ui-sref="home.donativo.list">
+            <i class="menu-icon fa fa-heart"></i>Doações</a>
+        </li>
+        <li class="sidebar-list" access-view="ROLE_INSTITUICAO"><a id="op_itens_doaveis" ui-sref="home.categoria">
+            <i class="menu-icon fa fa-tags"></i>Itens Doáveis</a>
+        </li>
+
+        <li class="sidebar-list" access-view="ROLE_INSTITUICAO"><a  id="op_mensageiros" ui-sref="home.mensageirosAss">
+            <i class="menu-icon fa fa-id-card-o"></i>Mensageiros</a>
+        </li>
+    </ul>
+
+    <div class="sidebar-footer">
+        <div class="col-xs-6">
+            <a href="#"> <i class="fa fa-info-circle"></i>
+                Sobre
+            </a>
+        </div>
+        <div class="col-xs-6">
+            <a href="#"> <i class="fa fa-question-circle"></i>
+                Ajuda
+            </a>
+        </div>
+    </div>
+</div>
