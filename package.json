@@ -1,6 +1,6 @@
 {
   "name": "ajudemais-web",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "modulo web do ajude mais",
   "main": "app.js",
   "scripts": {
