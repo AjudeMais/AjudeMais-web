@@ -4,8 +4,7 @@
   "description": "módulo web do Ajude Mais",
   "main": "app.js",
   "scripts": {
-    "start": "gulp build && node app.js",
-    "postinstall": "node node_modules/bower/bin/bower install"
+    "start": "node app.js"
   },
   "author": "Franck Aragão",
   "license": "AJUDE MAIS",
