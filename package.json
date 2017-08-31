@@ -1,13 +1,12 @@
 {
-  "name": "ajudemais-web",
-  "version": "1.0.0",
+  "name": "ajudemaisweb",
+  "version": "1.0.1",
   "description": "modulo web do ajude mais",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Franck Aragão",
-  "license": "AJUDE MAIS",
+  "author": "Franck Aragao",
   "devDependencies": {
     "bower": "1.8.0",
     "browser-sync": "2.18.8",
