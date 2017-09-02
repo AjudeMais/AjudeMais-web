@@ -1,12 +1,13 @@
-<div class="modal-header">
-    <button type="button" ng-click="vm.cancel()" class="close" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-    <h4 class="modal-title">Edição Itens Doáveis</h4>
-</div>
-
 <form name="categoriaForm" ng-submit="categoriaForm.$valid && vm.save()" role="form" novalidate>
-    <div class="modal-body row" id="modal-body">
+
+    <div class="modal-header">
+        <button type="button" ng-click="vm.cancel()" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Edição Itens Doáveis</h4>
+    </div>
+
+    <div class="modal-body row" id="modal-body-categoria">
 
         <div class="form-group am-required col-sm-8"
              ng-class="{'has-error': categoriaForm.$submitted && categoriaForm.nome.$invalid}">
@@ -29,13 +30,13 @@
         <div class="form-group am-required col-sm-12"
              ng-class="{'has-error': categoriaForm.$submitted && categoriaForm.descricao.$invalid}">
             <label class="control-label">Descrição</label>
-            <textarea name="descricao" ng-model="vm.categoria.descricao" maxlength="320" type="text" class="form-control" required/>
+            <textarea name="descricao" ng-model="vm.categoria.descricao" type="text"
+                      class="form-control" required/>
 
             <div ng-show="categoriaForm.$submitted && categoriaForm.descricao.$invalid"
                  class="help-block">Descrição deve ser informada
             </div>
         </div>
-
     </div>
 
     <div class="modal-footer">
@@ -43,8 +44,8 @@
         <button class="btn btn-default" type="button" ng-click="vm.cancel()">Cancelar</button>
     </div>
 
-</form>
 
-<div class="overlay" ng-show="vm.loading">
-    <i class="fa fa-refresh fa-spin"></i>
-</div>
+    <div class="overlay" ng-show="vm.loading">
+        <i class="fa fa-refresh fa-spin"></i>
+    </div>
+</form>

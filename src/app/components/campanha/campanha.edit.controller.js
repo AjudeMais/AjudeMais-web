@@ -147,7 +147,7 @@
          * valida os campos de uma meta;
          * @param meta
          */
-        validateFieldsMeta = function (meta) {
+        function validateFieldsMeta(meta) {
             if (meta.categoria == undefined) {
                 vm.isCtgNotEmpty = false;
             } else {
