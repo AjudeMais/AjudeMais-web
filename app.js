@@ -4,10 +4,10 @@ var app = express();
 
 app.set('port', (process.env.PORT || 3400));
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'src')));
 
 app.get('/*', function(req, res) {
-    res.sendFile(__dirname + '/dist/index.html')
+    res.sendFile(__dirname + '/src/index.html')
 });
 
 var server = app.listen(app.get('port'), function() {

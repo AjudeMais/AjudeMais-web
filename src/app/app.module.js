@@ -7,7 +7,7 @@
  * @author <a href="https://franckaj.github.io/">Franck Aragão</a>
  */
 (function () {
-    angular.module('amApp', ['amRoute', 'layout', 'ui.bootstrap', 'templates',
+    angular.module('amApp', ['amRoute', 'layout', 'ui.bootstrap', /*'templates',*/
         'ngAnimate', 'datatables', 'datatables.bootstrap', 'ajudeMais.utils', 'ngCookies', 'ngCapsLock',
         'ngStorage', 'idf.br-filters', 'ui.utils.masks', 'angular.viacep', 'frapontillo.bootstrap-switch',
         'chart.js'

@@ -60,7 +60,7 @@ gulp.task('scripts', ['vendors'], function () {
         .pipe(wrap('(function(angular){\n\'use strict\';\n<%= contents %>})(window.angular);'))
         .pipe(concat('scripts.min.js'))
         .pipe(ngAnnotate())
-        .pipe(uglify())
+        /*.pipe(uglify())*/
         .pipe(gulp.dest(config.paths.dist + '/app/js/'));
 });
 

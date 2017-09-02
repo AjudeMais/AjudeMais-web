@@ -69,7 +69,7 @@ exports.paths = {
     ],
     css: [
         'src/vendors/bootstrap/dist/css/bootstrap.min.css',
-        'src/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css',
+        'src/vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css',
         'src/content/css/main.css',
         'src/vendors/iCheck/skins/square/_all.css',
         'src/vendors/font-awesome/css/font-awesome.css',
