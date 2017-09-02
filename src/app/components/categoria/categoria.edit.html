@@ -29,9 +29,10 @@
 
         <div class="form-group am-required col-sm-12"
              ng-class="{'has-error': categoriaForm.$submitted && categoriaForm.descricao.$invalid}">
-            <label class="control-label">Descrição</label>
-            <textarea name="descricao" ng-model="vm.categoria.descricao" type="text"
-                      class="form-control" required/>
+            <label class="control-label" for="descricao-categoria-item">Descrição</label>
+            <textarea name="descricao" id="descricao-categoria-item"
+                      ng-model="vm.categoria.descricao" maxlength="320" type="text"
+                      class="form-control" required></textarea>
 
             <div ng-show="categoriaForm.$submitted && categoriaForm.descricao.$invalid"
                  class="help-block">Descrição deve ser informada
