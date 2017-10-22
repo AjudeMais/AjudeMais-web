@@ -3,7 +3,7 @@
 exports.base = {
     port: 8000,
     apiDev: 'http://localhost:8080',
-    apiProd: 'http://165.227.200.97:8080',
+    apiProd: 'https://165.227.200.97:8080',
     constantTemplate: '(function () {\n' +
     '    angular.module(\'<%- moduleName %>\')\n' +
     '<% constants.forEach(function(constant) { %>        .constant(\'<%- constant.name %>\', <%= constant.value %>)\n<% }) %>;\n' +
