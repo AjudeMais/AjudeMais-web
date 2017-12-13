@@ -7,11 +7,9 @@
   "scripts": {
     "start": "node app.js"
   },
-
   "dependencies": {
     "express": "4.15.2"
   },
-
   "devDependencies": {
     "bower": "1.8.0",
     "browser-sync": "2.18.8",
