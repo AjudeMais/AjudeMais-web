@@ -16,7 +16,9 @@ exports.paths = {
     tmp: 'tmp',
     static: [
         'src/content/img/**/*',
-        'src/content/fonts/**/*'
+        'src/content/fonts/**/*',
+        'src/manifest.json',
+        'src/sw.js'
     ],
     templates: [
         'src/app/**/**/*.html'
