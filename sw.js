@@ -8,7 +8,7 @@ self.addEventListener('install', function (event) {
         'index.html',
         'app/js/plugins.min.js',
         'app/js/scripts.min.js',
-        'content/css/main.css'
+        'content/css/main.min.css'
       ]);
     })
   )
