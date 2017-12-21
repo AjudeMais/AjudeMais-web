@@ -78,7 +78,7 @@ gulp.task('inject', function () {
         config.paths.dist + '/content/**/*.css'], {read: false});
 
     return gulp.src('./src/index.html')
-        .pipe(inject(sources, {ignorePath: 'dist'}))
+        .pipe(inject(sources, {addRootSlash : false, ignorePath: 'dist'}))
         .pipe(gulp.dest('./dist'));
 });
 
