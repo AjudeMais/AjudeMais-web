@@ -4,7 +4,9 @@
 /target/www/**
 /src/test/javascript/coverage/
 /src/test/javascript/PhantomJS*/
-.package-lock.json
+/dist
+dist
+.dist
 
 ######################
 # Node
