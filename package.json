@@ -5,8 +5,7 @@
   "main": "app.js",
   "author": "Franck Aragão <fjunior.aragao@gmail.com>",
   "scripts": {
-    "start": "node app.js",
-    "deploy": "gulp build gulp deploy"
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "4.15.2"
