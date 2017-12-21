@@ -13,6 +13,7 @@ var path = require('path');
 var inject = require('gulp-inject');
 var rename = require('gulp-rename');
 var ngConstant = require('gulp-ng-constant');
+var ghPages = require('gulp-gh-pages');
 
 var config = require('./config');
 
@@ -141,3 +142,8 @@ gulp.task('start', ['install']);
 gulp.task('build', function (cb) {
     return runSequence('clean', 'copy', 'styles', 'ngconstant:prod', 'scripts', ['inject'], cb)
 });
+
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+      .pipe(ghPages());
+  });
