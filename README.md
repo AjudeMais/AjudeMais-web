@@ -1,5 +1,5 @@
 # Ajude Mais - Web
-Aplicação diponível em: [ajudemais.github.io/ajudeMais-web](ajudemais.github.io/ajudeMais-web)
+Aplicação diponível em: [https://ajudemais.github.io/ajudeMais-web](https://ajudemais.github.io/ajudeMais-web)
 
 # REQUISITOS
 * NodeJS 8.x
