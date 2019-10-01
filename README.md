@@ -2,7 +2,7 @@
 Aplicação diponível em: [ajudemais.github.io/ajudeMais-web](ajudemais.github.io/ajudeMais-web)
 
 # REQUISITOS
-* NodeJS 8.x;
+* NodeJS 8.x
 * Gulp
 * Bower
 
