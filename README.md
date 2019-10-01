@@ -1,12 +1,10 @@
-# Ajude Mais - Web
+# Ajude Mais - Módulo Web
+
 Ajude Mais visa gerenciar todo o processo de doação, em especial:
 * Melhorar a forma como as doações são feitas;
 * Aproximar os doadores das instituições de caridade;
 * Tornar pública as necessidades de cada instituição;
 * Viabilizar o processo de doar para pessoas que não tem tempo de ir a instituições
-
-Aplicação diponível em: [ajudemais.github.io/ajudeMais-web](ajudemais.github.io/ajudeMais-web)
-
 
 # REQUISITOS
 * NodeJS 8.x
